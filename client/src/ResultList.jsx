@@ -22,6 +22,15 @@ export default function ResultList ({ queryString }) {
 
   return <div className="result-list">
     Results for {queryString}
-    <AnimeCard result={result} />
+    {function (){
+      if (resultList.length > 0) {
+        let renderResults = resultList.map(
+          (result) => {
+            return <AnimeCard result={result} />
+          }
+        )
+        return renderResults;
+      }
+    }()}
   </div>
 }

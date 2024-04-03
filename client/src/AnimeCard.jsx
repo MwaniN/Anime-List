@@ -16,7 +16,10 @@ import React, { useState } from 'react';
 
 export default function AnimeCard ({ result }) {
 
+  // console.log(result, " result from inside the anime card!")
+
   return <div anime-card>
-    This is the anime card
+    <img className="image" src={result.images.jpg.image_url} alt={`Image of the ${result.title_english} anime`} />
+    <span className="title">Title: {result.title_english}</span>
   </div>
 }
