@@ -5,7 +5,6 @@ import axios from 'axios'
 export default function ResultList ({ queryString }) {
 
   const [resultList, setResultList] = useState('');
-  const result = queryString;
 
   useEffect( () => {
     axios.get(`https://api.jikan.moe/v4/anime?q=${queryString}`).then(
@@ -14,7 +13,7 @@ export default function ResultList ({ queryString }) {
       }
     )
 
-  }, [])
+  }, [queryString])
 
   if (resultList.length > 0) {
     console.log(resultList)
