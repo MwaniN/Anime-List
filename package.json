@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client-dev": "webpack-dev-server .",
-    "build": "webpack .",
+    "client-dev": "webpack-dev-server /client/src/index.js",
+    "build": "webpack /client/src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
