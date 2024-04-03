@@ -26,7 +26,7 @@ export default function ResultList ({ queryString }) {
       if (resultList.length > 0) {
         let renderResults = resultList.map(
           (result) => {
-            return <AnimeCard result={result} />
+            return <AnimeCard result={result} key={result.mal_id} />
           }
         )
         return renderResults;

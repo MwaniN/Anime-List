@@ -11,6 +11,9 @@ import React, { useState } from 'react';
 // title
 // images.jpg.image_url
 
+// If there's no English title use the Japanese one, change the logic
+// add a toggle for NSFW results?
+
 
 
 
