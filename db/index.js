@@ -15,4 +15,6 @@ async function currDBTest () {
   return result;
 }
 
+// anime table should store enough information to be able to render the anime data without querying myanimelist again
+
 currDBTest().then((data) => {console.log(data.rows[0])})
