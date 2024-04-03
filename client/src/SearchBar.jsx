@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ResultList from './ResultList.jsx';
 
 export default function SearchBar () {
 
@@ -19,8 +20,15 @@ export default function SearchBar () {
   }
 
 
-  return <form method="post" onSubmit={handleSubmit} >
+  return <div><form method="post" onSubmit={handleSubmit} >
   <input value={searchInput} onChange={(e) => setSearchInput(e.target.value)} type="search-bar" className="search-bar" placeholder="Search for your Anime"/>
   <button type="submit">Search!</button>
   </form>
+  {function (){
+    if (queryString.length > 0) {
+      return <ResultList queryString={queryString} />
+    }
+    return
+  }()}
+  </div>
 }
