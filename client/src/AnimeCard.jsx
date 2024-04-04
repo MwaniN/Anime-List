@@ -42,6 +42,16 @@ export default function AnimeCard ({ result }) {
     }</span>
     <span className="score">Average Score: {result.score}</span>
     <span className="votes">Votes: {result.scored_by}</span>
+    <span className="genres">Genres: {
+      function (){
+        let genres = result.genres.map(
+          (genre) => {
+            return genre.name
+          }
+        )
+        return genres.join(', ');
+      }()
+    }</span>
     <span className="status">Status: {result.status}</span>
     <span className="year">Aired: {result.aired.string}</span>
     <span className="studios">Studio: {
