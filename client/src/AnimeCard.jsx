@@ -18,16 +18,37 @@ import axios from 'axios';
 // future enhancement - make the number of votes be formatted
 // future enhancement - limit text overflow for synopsis
 // future enhancement - make images load first before rendering the div
-// future enhancement - use object destructuring for everything
+// future enhancement - make it so they can't add this anime to the collection, only if you're in that collection
+// (for when there are multiple collections available)
 
 // on handleSubmit -> use axios to add this particular anime's data to the corresponding collection in the DB
 // for aired and image_url change the way the props are passed in for them so that the card
 // can be easily reusable when the anime is called from the DB - or just assign them to a variable before making the call.
 
-export default function AnimeCard ({ title, image_url, animegenres, aired, animestudios, score, scored_by, status, synopsis }) {
+export default function AnimeCard ({ title, image_url, animegenres, aired, animestudios, score, scored_by, status, synopsis, mal_id }) {
+
+  const [canAdd, setCanAdd] = useState(true)
 
   function handleSubmit(e){
     e.preventDefault();
+
+    // creating the entry in the anime table will happen if it does not exist already
+    // that can be handled server side, along with putting the entry in the anime_collections table
+
+    axios.post("http://localhost:3000/anime", {
+      mal_id: mal_id,
+      image_url: image_url,
+      title: title,
+      score: score,
+      scored_by: scored_by,
+      animegenres: animegenres,
+      status: status,
+      aired: aired,
+      animestudios: animestudios,
+      synopsis: synopsis
+    }).then(() => {
+      setCanAdd(false)
+    })
 
     // insert axios call here to the db - include the full http:// address
   }
@@ -43,7 +64,13 @@ export default function AnimeCard ({ title, image_url, animegenres, aired, anime
     <span className="studios">Studio: {animestudios}</span>
     <div className="synopsis">Synopsis: {synopsis}</div>
     <form method="post" onSubmit={handleSubmit}>
-      <button type="submit">Add to Collection</button>
+      <button type="submit">{function(){
+        if(canAdd){
+          return "Add to Collection"
+        } else {
+          return "Already in Collection"
+        }
+      }()}</button>
     </form>
   </div>
 }

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import ResultList from './ResultList.jsx';
 
+// future enhancements - add loading animation while querying
+// future enhancements - display a message when there's no result
+
 export default function SearchBar () {
 
   const [searchInput, setSearchInput] = useState('');
