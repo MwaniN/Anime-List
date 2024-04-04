@@ -24,6 +24,8 @@ import React, { useState } from 'react';
 
 export default function AnimeCard ({ result }) {
 
+  let animeGenres = '';
+  let animeStudios = '';
 
   function handleSubmit(e){
     e.preventDefault();
@@ -49,7 +51,8 @@ export default function AnimeCard ({ result }) {
             return genre.name
           }
         )
-        return genres.join(', ');
+        animeGenres = genres.join(', ')
+        return animeGenres;
       }()
     }</span>
     <span className="status">Status: {result.status}</span>
@@ -61,7 +64,8 @@ export default function AnimeCard ({ result }) {
             return studio.name
           }
         )
-        return studios.join(', ');
+        animeStudios = studios.join(', ');
+        return animeStudios;
       }()
     }</span>
     <div className="synopsis">Synopsis: {result.synopsis}</div>
