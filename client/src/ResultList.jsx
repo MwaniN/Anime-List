@@ -39,8 +39,7 @@ export default function ResultList ({ queryString }) {
                       return genre.name
                     }
                   )
-                  animegenres = genres.join(', ')
-                  return animegenres;
+                  return genres.join(', ');
                 }
 
                   function studios (){
@@ -49,8 +48,7 @@ export default function ResultList ({ queryString }) {
                         return studio.name
                       }
                     )
-                    let animeStudios = studios.join(', ');
-                    return animeStudios;
+                    return studios.join(', ');
                   }
 
 
