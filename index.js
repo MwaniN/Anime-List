@@ -15,10 +15,11 @@ app.get('/anime', (req, res) => {
   res.status(200).send("Here's an anime");
 })
 
-// app.post('/anime', (req, res) => {
+app.post('/anime', (req, res) => {
+  console.log(req.body, " this is req.body baby!!")
 
-//   res.status(201).send("Successfully anime");
-// })
+  res.status(201).send("Successfully anime");
+})
 
 
 
