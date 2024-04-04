@@ -60,7 +60,7 @@ export default function AnimeCard ({ result }) {
       }()
     }</span>
     <span className="status">Status: {result.status}</span>
-    <span className="year">Aired: {result.aired.string}</span>
+    <span className="aired">Aired: {result.aired.string}</span>
     <span className="studios">Studio: {
       function (){
         let studios = result.studios.map(

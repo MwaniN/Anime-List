@@ -36,15 +36,19 @@ async function CreateTables(){
     synopsis TEXT
     );`)
 
-    await client.query(`CREATE TABLE IF NOT EXISTS collections (
-      id SERIAL PRIMARY KEY,
-      collection_name VARCHAR(400),
-      created_by VARCHAR(60)
-    );`)
+  await client.query(`CREATE TABLE IF NOT EXISTS collections (
+    id SERIAL PRIMARY KEY,
+    collection_name VARCHAR(400),
+    created_by VARCHAR(60)
+  );`)
 
-    await client.query(`CREATE TABLE IF NOT EXISTS collections_anime (
-      id SERIAL PRIMARY KEY,
-      anime_id INT references anime(id),
-      collection_id INT references collections(id)
-    );`)
+  await client.query(`CREATE TABLE IF NOT EXISTS collections_anime (
+    id SERIAL PRIMARY KEY,
+    anime_id INT references anime(id),
+    collection_id INT references collections(id)
+  );`)
 }
+
+CreateTables().then(() => {console.log(`Tables successfully created or already exist`)})
+
+module.exports = client;
