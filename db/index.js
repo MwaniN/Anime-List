@@ -23,5 +23,28 @@ currDBTest().then((data) => {console.log(data.rows[0])})
 
 async function CreateTables(){
   await client.query(`CREATE TABLE IF NOT EXISTS anime (
-    i integer);`)
+    id SERIAL PRIMARY KEY,
+    mal_id INT,
+    image_url TEXT,
+    title VARCHAR(400),
+    score DECIMAL,
+    scored_by INT,
+    animeGenres VARCHAR(200),
+    status VARCHAR(40),
+    aired VARCHAR(40),
+    animeStudios VARCHAR(400),
+    synopsis TEXT
+    );`)
+
+    await client.query(`CREATE TABLE IF NOT EXISTS collections (
+      id SERIAL PRIMARY KEY,
+      collection_name VARCHAR(400),
+      created_by VARCHAR(60)
+    );`)
+
+    await client.query(`CREATE TABLE IF NOT EXISTS collections_anime (
+      id SERIAL PRIMARY KEY,
+      anime_id INT references anime(id),
+      collection_id INT references collections(id)
+    );`)
 }

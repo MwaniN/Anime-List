@@ -20,12 +20,14 @@ import React, { useState } from 'react';
 // future enhancement - make images load first before rendering the div
 
 // on handleSubmit -> use axios to add this particular anime's data to the corresponding collection in the DB
-
+// for aired and image_url change the way the props are passed in for them so that the card
+// can be easily reusable when the anime is called from the DB
 
 export default function AnimeCard ({ result }) {
 
   let animeGenres = '';
   let animeStudios = '';
+  let title = '';
 
   function handleSubmit(e){
     e.preventDefault();
@@ -36,9 +38,11 @@ export default function AnimeCard ({ result }) {
     <span className="title">Title: {
       function(){
         if (result.title_english){
-          return result.title_english;
+          title = result.title_english
+          return title;
         } else {
-          return result.title;
+          title = result.title
+          return title;
         }
       }()
     }</span>
