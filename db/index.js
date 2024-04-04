@@ -29,10 +29,10 @@ async function CreateTables(){
     title VARCHAR(400),
     score DECIMAL,
     scored_by INT,
-    animeGenres VARCHAR(200),
+    animegenres VARCHAR(200),
     status VARCHAR(40),
     aired VARCHAR(40),
-    animeStudios VARCHAR(400),
+    animestudios VARCHAR(400),
     synopsis TEXT
     );`)
 
