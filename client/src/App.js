@@ -5,10 +5,11 @@ import MainPage from "./MainPage.jsx"
 // to display each
 
 const App = () =>{
+
     return (
         <>
         <h1>
-            Hello world! I am using React Bro!
+            Welcome to Anime Heap!
         </h1>
         <MainPage />
         </>

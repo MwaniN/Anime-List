@@ -25,7 +25,41 @@ export default function ResultList ({ queryString }) {
       if (resultList.length > 0) {
         let renderResults = resultList.map(
           (result) => {
-            return <AnimeCard result={result} key={result.mal_id} />
+
+              function titleName (){
+                if (result.title_english){
+                  return result.title_english;
+                } else {
+                  return result.title;
+                }
+              }
+                function animeGenres (){
+                  let genres = result.genres.map(
+                    (genre) => {
+                      return genre.name
+                    }
+                  )
+                  animegenres = genres.join(', ')
+                  return animegenres;
+                }
+
+                  function studios (){
+                    let studios = result.studios.map(
+                      (studio) => {
+                        return studio.name
+                      }
+                    )
+                    let animeStudios = studios.join(', ');
+                    return animeStudios;
+                  }
+
+
+              let title = titleName();
+              let animegenres = animeGenres();
+              let animestudios = studios();
+
+            return <AnimeCard key={result.mal_id} mal_id={result.mal_id} title={title} image_url={result.images.jpg.image_url} animegenres={animegenres} aired={result.aired.string}
+            animestudios={animestudios} score={result.score} scored_by={result.scored_by} status={result.status} synopsis={result.synopsis}/>
           }
         )
         return renderResults;

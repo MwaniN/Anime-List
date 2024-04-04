@@ -18,16 +18,13 @@ import axios from 'axios';
 // future enhancement - make the number of votes be formatted
 // future enhancement - limit text overflow for synopsis
 // future enhancement - make images load first before rendering the div
+// future enhancement - use object destructuring for everything
 
 // on handleSubmit -> use axios to add this particular anime's data to the corresponding collection in the DB
 // for aired and image_url change the way the props are passed in for them so that the card
 // can be easily reusable when the anime is called from the DB - or just assign them to a variable before making the call.
 
-export default function AnimeCard ({ result }) {
-
-  let animeGenres = '';
-  let animeStudios = '';
-  let title = '';
+export default function AnimeCard ({ title, image_url, animegenres, aired, animestudios, score, scored_by, status, synopsis }) {
 
   function handleSubmit(e){
     e.preventDefault();
@@ -36,45 +33,15 @@ export default function AnimeCard ({ result }) {
   }
 
   return <div className="anime-card">
-    <img className="image" src={result.images.jpg.image_url} alt={`Image of the ${result.title_english} anime`} />
-    <span className="title">Title: {
-      function(){
-        if (result.title_english){
-          title = result.title_english
-          return title;
-        } else {
-          title = result.title
-          return title;
-        }
-      }()
-    }</span>
-    <span className="score">Average Score: {result.score}</span>
-    <span className="votes">Votes: {result.scored_by}</span>
-    <span className="genres">Genres: {
-      function (){
-        let genres = result.genres.map(
-          (genre) => {
-            return genre.name
-          }
-        )
-        animeGenres = genres.join(', ')
-        return animeGenres;
-      }()
-    }</span>
-    <span className="status">Status: {result.status}</span>
-    <span className="aired">Aired: {result.aired.string}</span>
-    <span className="studios">Studio: {
-      function (){
-        let studios = result.studios.map(
-          (studio) => {
-            return studio.name
-          }
-        )
-        animeStudios = studios.join(', ');
-        return animeStudios;
-      }()
-    }</span>
-    <div className="synopsis">Synopsis: {result.synopsis}</div>
+    <img className="image" src={image_url} alt={`Image of the ${title} anime`} />
+    <span className="title">Title: {title}</span>
+    <span className="score">Average Score: {score}</span>
+    <span className="votes">Votes: {scored_by}</span>
+    <span className="genres">Genres: {animegenres}</span>
+    <span className="status">Status: {status}</span>
+    <span className="aired">Aired: {aired}</span>
+    <span className="studios">Studio: {animestudios}</span>
+    <div className="synopsis">Synopsis: {synopsis}</div>
     <form method="post" onSubmit={handleSubmit}>
       <button type="submit">Add to Collection</button>
     </form>
