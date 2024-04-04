@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import axios from 'axios';
 
 // Use these params
 // loop through genres array and for each object take name
@@ -21,7 +21,7 @@ import React, { useState } from 'react';
 
 // on handleSubmit -> use axios to add this particular anime's data to the corresponding collection in the DB
 // for aired and image_url change the way the props are passed in for them so that the card
-// can be easily reusable when the anime is called from the DB
+// can be easily reusable when the anime is called from the DB - or just assign them to a variable before making the call.
 
 export default function AnimeCard ({ result }) {
 
@@ -31,6 +31,8 @@ export default function AnimeCard ({ result }) {
 
   function handleSubmit(e){
     e.preventDefault();
+
+    // insert axios call here to the db - include the full http:// address
   }
 
   return <div className="anime-card">
