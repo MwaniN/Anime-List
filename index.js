@@ -4,6 +4,7 @@ const path = require('path');
 const app = express();
 const port = 3000;
 const client = require('./db');
+const models = require('./db/models.js')
 
 app.use(express.json());
 app.use(cors());
@@ -18,7 +19,8 @@ app.get('/anime', (req, res) => {
 app.post('/anime', (req, res) => {
   console.log(req.body, " this is req.body baby!!")
 
-  res.status(201).send("Successfully anime");
+models.addAnime(req.body).then(() => {res.status(201).send('successfully added anime')})
+
 })
 
 
