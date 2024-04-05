@@ -11,14 +11,19 @@ app.use(cors());
 
 
 
-app.get('/anime', (req, res) => {
+app.get('/anime/:mal_id', (req, res) => {
 
-  res.status(200).send("Here's an anime");
+  models.getAnime(req.params).then((result) => {res.status(200).send(result.rows)})
+
+})
+
+app.get('/anime/', (req, res) => {
+
+  models.getAllAnime().then((result) => {res.status(200).send(result.rows)})
+
 })
 
 app.post('/anime', (req, res) => {
-  console.log(req.body, " this is req.body baby!!")
-
 models.addAnime(req.body).then(() => {res.status(201).send('successfully added anime')})
 
 })

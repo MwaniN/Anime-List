@@ -34,3 +34,19 @@ module.exports.addAnime = async function (req, res) {
 
   return
 }
+
+module.exports.getAnime = async function (req, res) {
+
+  let result = await client.query(`SELECT mal_id, image_url, title, score, scored_by, animegenres, status, aired, animestudios, synopsis FROM
+  anime WHERE mal_id = '${req.mal_id}';`)
+
+  return result
+}
+
+module.exports.getAllAnime = async function (req, res) {
+
+  let result = await client.query(`SELECT mal_id, image_url, title, score, scored_by, animegenres, status, aired, animestudios, synopsis FROM
+  anime;`)
+
+  return result
+}
