@@ -5,3 +5,9 @@ import React, { useState } from 'react';
 // Could also have the collections be in a dropdown instead - might avoid needing to resize the cards
 
 // Start with only having one collection, so no need for the left side showing the collection
+
+export default function CollectionPage () {
+
+  return <>
+  It's the collection page homie</>
+}
