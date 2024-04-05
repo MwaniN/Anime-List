@@ -18,14 +18,12 @@ import axios from 'axios';
 // future enhancement - make the number of votes be formatted
 // future enhancement - limit text overflow for synopsis
 // future enhancement - make images load first before rendering the div
-// future enhancement - make it so they can't add this anime to the collection, only if you're in that collection
+// future enhancement - make it so they can't add this anime to the current collection, only if you're in that collection
 // (for when there are multiple collections available)
 // future enhancement - when on the collection page change the "Add to Collection" button to "Remove from Collection"
 // and have different functionality for that
 
 // on handleSubmit -> use axios to add this particular anime's data to the corresponding collection in the DB
-// for aired and image_url change the way the props are passed in for them so that the card
-// can be easily reusable when the anime is called from the DB - or just assign them to a variable before making the call.
 
 export default function AnimeCard ({ title, image_url, animegenres, aired, animestudios, score, scored_by, status, synopsis, mal_id, currPage }) {
 
