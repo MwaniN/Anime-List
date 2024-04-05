@@ -15,9 +15,9 @@ export default function ResultList ({ queryString }) {
 
   }, [queryString])
 
-  if (resultList.length > 0) {
-    console.log(resultList)
-  }
+  // if (resultList.length > 0) {
+  //   console.log(resultList)
+  // }
 
   return <div className="result-list">
     Results for {queryString}

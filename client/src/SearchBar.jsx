@@ -13,9 +13,9 @@ export default function SearchBar () {
 
     setQueryString(searchInput);
 
-    console.log(queryString, " this is query string");
+    // console.log(queryString, " this is query string");
 
-    console.log(searchInput, " this is search input");
+    // console.log(searchInput, " this is search input");
 
     setSearchInput('');
     e.preventDefault();
