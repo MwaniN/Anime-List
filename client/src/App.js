@@ -34,7 +34,7 @@ const App = () =>{
             if (currPage === "MainPage"){
                 return <MainPage />
             } else if (currPage === "CollectionPage") {
-                return <CollectionPage />
+                return <CollectionPage currPage={currPage} />
             }
         }()}
         </>
