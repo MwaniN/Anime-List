@@ -9,10 +9,28 @@ const client = require('./index.js');
 
 module.exports.addAnime = async function (req, res) {
 
-  await client.query(`INSERT INTO anime (mal_id, image_url, title, score, scored_by, animegenres, status, aired, animestudios, synopsis)
-  VALUES ('${req.mal_id}', '${req.image_url}', '${req.title}', '${req.score}', '${req.scored_by}', '${req.animegenres}', '${req.status}', '${req.aired}',
-  '${req.animestudios}', '${req.synopsis}')
-  ON CONFLICT (mal_id) DO NOTHING;`)
+  // need to accomodate for single quotes in text
 
-   return
+  let thingsToInsert = [
+    req.mal_id,
+    req.image_url,
+    req.title,
+    req.score,
+    req.scored_by,
+    req.animegenres,
+    req.status,
+    req.aired,
+    req.animestudios,
+    req.synopsis
+  ]
+
+  await client.query(`INSERT INTO anime (mal_id, image_url, title, score, scored_by, animegenres, status, aired, animestudios, synopsis)
+  VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10);`, thingsToInsert);
+
+  // await client.query(`INSERT INTO anime (mal_id, image_url, title, score, scored_by, animegenres, status, aired, animestudios, synopsis)
+  // VALUES ('${req.mal_id}', '${req.image_url}', '${req.title}', '${req.score}', '${req.scored_by}', '${req.animegenres}', '${req.status}', '${req.aired}',
+  // '${req.animestudios}', '${req.synopsis}');`)
+
+
+  return
 }
