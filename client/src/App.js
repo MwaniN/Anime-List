@@ -25,11 +25,18 @@ const App = () =>{
 
     return (
         <>
-        <h1>
+        <header className="header">
+        <h1 className="header-title">
             Welcome to Anime Heap!
         </h1>
-        <a className="toolbar-link" href='' onClick={handleClick}>Home</a>
-        <a className="toolbar-link" href='' onClick={handleClick}>Collections</a>
+        {function(){
+            if(currPage === "MainPage") {
+                return <a className="toolbar-link" href='' onClick={handleClick}>Collections</a>
+            } else if (currPage === "CollectionPage") {
+                return <a className="toolbar-link" href='' onClick={handleClick}>Home</a>
+            }
+        }()}
+        </header>
         {function(){
             if (currPage === "MainPage"){
                 return <MainPage currPage={currPage} />
