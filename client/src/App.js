@@ -32,7 +32,7 @@ const App = () =>{
         <a className="toolbar-link" href='' onClick={handleClick}>Collections</a>
         {function(){
             if (currPage === "MainPage"){
-                return <MainPage />
+                return <MainPage currPage={currPage} />
             } else if (currPage === "CollectionPage") {
                 return <CollectionPage currPage={currPage} />
             }

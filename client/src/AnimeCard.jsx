@@ -27,7 +27,7 @@ import axios from 'axios';
 // for aired and image_url change the way the props are passed in for them so that the card
 // can be easily reusable when the anime is called from the DB - or just assign them to a variable before making the call.
 
-export default function AnimeCard ({ title, image_url, animegenres, aired, animestudios, score, scored_by, status, synopsis, mal_id }) {
+export default function AnimeCard ({ title, image_url, animegenres, aired, animestudios, score, scored_by, status, synopsis, mal_id, currPage }) {
 
   const [canAdd, setCanAdd] = useState(true)
 
@@ -70,7 +70,7 @@ export default function AnimeCard ({ title, image_url, animegenres, aired, anime
         if(canAdd){
           return "Add to Collection"
         } else {
-          return "Already in Collection"
+            return "Added to Collection"
         }
       }()}</button>
     </form>
