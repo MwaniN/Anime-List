@@ -5,31 +5,3 @@
 .header-title {
   display: inline-block;
 }
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  background-color: #0F0F0F;
-}
-
-.result-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 100px;
-}
-
-.anime-card {
-  height: 325px;
-  width: 325px;
-  background-color: #232D3F;
-  margin: 10px;
-}
-
-.anime-card img {
-  max-height: 100%;
-  max-width: auto;
-  object-fit: cover;
-}

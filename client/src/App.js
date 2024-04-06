@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import MainPage from "./MainPage.jsx"
 import CollectionPage from "./Collections.jsx"
+// import '../public/styles.css';
 
 // make a state that either shows Main Page or Collection page with conditional arguments in the return statement here
 // to display each
@@ -26,7 +27,7 @@ const App = () =>{
     return (
         <>
         <header className="header">
-        <h1 className="text-4xl font-bold underline">
+        <h1 className="text-sky-500">
             Welcome to Anime Heap!
         </h1>
         {function(){
