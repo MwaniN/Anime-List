@@ -26,7 +26,7 @@ const App = () =>{
     return (
         <>
         <header className="header">
-        <h1 className="header-title">
+        <h1 className="text-4xl font-bold underline">
             Welcome to Anime Heap!
         </h1>
         {function(){
