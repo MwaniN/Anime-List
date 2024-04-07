@@ -23,6 +23,7 @@ export default function ResultList ({ queryString }) {
     Results for {queryString}
     {function (){
       if (resultList.length > 0) {
+        console.log(resultList);
         let renderResults = resultList.map(
           (result) => {
 

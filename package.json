@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client-dev": "webpack-dev-server /client/src/index.js",
-    "client-build": "webpack /client/src/index.js",
-    "server-dev": "nodemon index.js --watch",
+    "cli-dev": "webpack-dev-server /client/src/index.js",
+    "cl-build": "webpack /client/src/index.js",
+    "serv-dev": "nodemon index.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,6 +27,7 @@
     "@babel/preset-react": "^7.24.1",
     "babel-loader": "^9.1.3",
     "html-webpack-plugin": "^5.6.0",
+    "style-loader": "^3.3.4",
     "tailwindcss": "^3.4.3",
     "webpack": "^5.91.0",
     "webpack-cli": "^5.1.4",

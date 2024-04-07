@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MainPage from "./MainPage.jsx"
 import CollectionPage from "./Collections.jsx"
-// import '../public/styles.css';
+import styles from "./index.css"
 
 // make a state that either shows Main Page or Collection page with conditional arguments in the return statement here
 // to display each
