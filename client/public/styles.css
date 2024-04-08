@@ -1,0 +1,24 @@
+
+.collection-list, .result-list {
+  border: 2px solid blue;
+}
+
+.anime-card {
+  border: 2px solid goldenrod;
+  width: 70%;
+  height: 500px;
+  margin-top: 5em;
+  margin-bottom: 5em;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow-x: auto;
+}
+
+.image {
+  align-self: center;
+}
+
+.header-title, .toolbar-link {
+  display: inline-block;
+}
