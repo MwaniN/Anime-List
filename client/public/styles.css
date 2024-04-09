@@ -1,4 +1,3 @@
-
 .collection-list, .result-list {
   border: 2px solid blue;
 }
@@ -13,12 +12,18 @@
   flex-direction: column;
   flex-wrap: wrap;
   overflow-x: auto;
+  justify-content: space-between;
+  align-content: flex-start;
+  /* position: relative; */
 }
 
 .image {
   align-self: center;
+  /* position: absolute;
+  left: 0; */
 }
 
-.header-title, .toolbar-link {
+.header-title, .toolbar-link, .synopsis-container {
   display: inline-block;
 }
+

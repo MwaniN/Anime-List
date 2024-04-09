@@ -54,15 +54,17 @@ export default function AnimeCard ({ title, image_url, animegenres, aired, anime
   }
 
   return <div className="anime-card">
+    <span className="title">{title}</span>
     <img className="image" src={image_url} alt={`Image of the ${title} anime`} />
-    <span className="title">Title: {title}</span>
     <span className="score">Average Score: {score}</span>
-    <span className="votes">Votes: {scored_by}</span>
+    <span className="votes">User Votes: {scored_by}</span>
     <span className="genres">Genres: {animegenres}</span>
     <span className="status">Status: {status}</span>
     <span className="aired">Aired: {aired}</span>
     <span className="studios">Studio: {animestudios}</span>
+    <div className="synopsis-container">
     <div className="synopsis">Synopsis: {synopsis}</div>
+    </div>
     <form method="post" onSubmit={handleSubmit}>
       <button type="submit">{function(){
         if(canAdd){
