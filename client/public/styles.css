@@ -39,7 +39,25 @@ body {
   display: inline-block;
 }
 
-.card-content {
+.header-title {
+  font-family: "Bungee Spice", sans-serif;;
+}
 
+.toolbar-link {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+}
+
+a:link {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+a:active {
+  text-decoration: none;
 }
 
