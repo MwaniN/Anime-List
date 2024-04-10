@@ -55,7 +55,9 @@ export default function AnimeCard ({ title, image_url, animegenres, aired, anime
 
   return <div className="anime-card">
     <span className="title">{title}</span>
-    <img className="image" src={image_url} alt={`Image of the ${title} anime`} />
+    <div className="img-container">
+      <img className="image" src={image_url} alt={`Image of the ${title} anime`} />
+      </div>
     <span className="score">Average Score: {score}</span>
     <span className="votes">User Votes: {scored_by}</span>
     <span className="genres">Genres: {animegenres}</span>

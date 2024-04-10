@@ -20,7 +20,7 @@ export default function ResultList ({ queryString }) {
   // }
 
   return <div className="result-list">
-    Results for {queryString}
+    <div className="results-for"> Results for {queryString}</div>
     {function (){
       if (resultList.length > 0) {
         console.log(resultList);

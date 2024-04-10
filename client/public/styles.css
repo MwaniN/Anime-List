@@ -1,29 +1,45 @@
 .collection-list, .result-list {
   border: 2px solid blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: inherit;
+}
+body {
+  background-color:cornflowerblue;
 }
 
 .anime-card {
   border: 2px solid goldenrod;
+  background-color: floralwhite;
+  box-sizing: border-box;
   width: 70%;
   height: 500px;
-  margin-top: 5em;
-  margin-bottom: 5em;
+  margin-top: 4em;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   overflow-x: auto;
   justify-content: space-between;
   align-content: flex-start;
+  box-shadow: 0px 2px 4px lightgrey;
   /* position: relative; */
 }
 
 .image {
   align-self: center;
+  /* padding-left: 5px; */
+  /* width: auto;
+  height: auto; */
   /* position: absolute;
   left: 0; */
 }
 
 .header-title, .toolbar-link, .synopsis-container {
   display: inline-block;
+}
+
+.card-content {
+
 }
 
