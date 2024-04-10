@@ -65,7 +65,7 @@ export default function AnimeCard ({ title, image_url, animegenres, aired, anime
     <span className="aired">Aired: {aired}</span>
     <span className="studios">Studio: {animestudios}</span>
     <div className="synopsis-container">
-    <div className="synopsis">Synopsis: {synopsis}</div>
+    <div className="synopsis">{synopsis}</div>
     </div>
     <form method="post" onSubmit={handleSubmit}>
       <button type="submit">{function(){
