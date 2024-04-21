@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cli-dev": "webpack-dev-server /client/src/index.js",
+    "start": "webpack-dev-server /client/src/index.js",
     "cl-build": "webpack /client/src/index.js",
-    "serv-dev": "nodemon index.js --watch",
+    "build": "nodemon index.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

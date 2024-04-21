@@ -1,77 +1,22 @@
-.collection-list, .result-list {
-  border: 2px solid blue;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-}
-body {
-  background-color:cornflowerblue;
-}
-
-.anime-card {
-  border: 2px solid goldenrod;
-  background-color: floralwhite;
-  box-sizing: border-box;
-  width: 50%;
-  height: 30rem;
-  margin: 2em;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  overflow-x: auto;
-  justify-content: space-between;
-  align-content: flex-start;
-  box-shadow: 0px 2px 4px lightgrey;
-  /* font-family: "Oswald", sans-serif;
+/* font-family: "Oswald", sans-serif;
   font-weight: 200; */
-  /* position: relative; */
-}
 
-.image {
+img {
   align-self: center;
-  /* padding-left: 5px; */
-  /* width: auto;
-  height: auto; */
-  /* position: absolute;
-  left: 0; */
 }
 
-.header-title, .toolbar-link, .synopsis-container {
-  display: inline-block;
+/* body {
+  background-color: green;
 }
 
-.header-title {
-  font-family: "Bungee Spice", sans-serif;;
+@media only screen and (max-width: 500px) {
+  body {
+    background-color: dodgerblue;
+  }
 }
 
-.toolbar-link {
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
-  margin-left: 1rem;
-}
-
-a:link {
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-}
-a:active {
-  text-decoration: none;
-}
-
-.synopsis-container {
-  width:61%;
-}
-
-input {
-  background-color: aliceblue;
-}
-
-.title {
-  font-size: 17px;
-}
+@media only screen and (min-width: 1000px) {
+  body {
+    background-color: lightsalmon;
+  }
+} */
