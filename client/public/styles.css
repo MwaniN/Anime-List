@@ -5,6 +5,49 @@ img {
   align-self: center;
 }
 
+.header {
+  display: flex;
+  background-color: skyblue;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header a {
+  color: white;
+  margin-right: 40px;
+  font-size: 1.5rem;
+}
+
+.header-title {
+  margin-left: 40px;
+}
+
+@media only screen and (max-width: 811px) {
+  .header-title {
+    display: block;
+    margin: 0;
+  }
+
+  .header a {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header-title {
+    display: block;
+    margin: 0;
+  }
+
+  .header a {
+    margin: 0;
+  }
+  .header {
+    display: flex;
+    flex-direction: column;
+}
+
 /* body {
   background-color: green;
 }
