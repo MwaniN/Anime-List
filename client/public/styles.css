@@ -5,33 +5,41 @@ img {
   align-self: center;
 }
 
+body {
+  background-color: #adcbe3;
+}
+
 .header {
   display: flex;
-  background-color: skyblue;
-  color: white;
-  justify-content: space-between;
+  background-color: #2a4d69;
+  color: #e7eff6;
   align-items: center;
 }
 
 .header a {
   color: white;
-  margin-right: 40px;
+  margin-left: 1.5rem;
   font-size: 1.5rem;
 }
 
 .header-title {
-  margin-left: 40px;
+  margin-left: 10px;
 }
 
+.search-form {
+  text-align: center;
+}
+
+
 @media only screen and (max-width: 811px) {
-  .header-title {
+  /* .header-title {
     display: block;
-    margin: 0;
+    margin-left: 10px;
   }
 
   .header a {
-    margin: 0;
-  }
+    margin-left: 20px;
+  } */
 }
 
 @media only screen and (max-width: 480px) {

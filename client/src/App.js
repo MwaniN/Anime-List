@@ -26,9 +26,7 @@ const App = () =>{
     return (
         <>
         <nav className="header">
-        <h1 className="header-title">
-            Welcome to Anime Heap!
-        </h1>
+        <h1 className="header-title">Anime Heap</h1>
         {function(){
             if(currPage === "MainPage") {
                 return <a className="toolbar-link" href='' onClick={handleClick}>Collections</a>
