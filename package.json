@@ -38,6 +38,8 @@
     "bluebird": "^3.7.2",
     "cors": "^2.8.5",
     "express": "^4.19.2",
+    "firebase": "^10.11.1",
+    "firebaseui": "^6.1.0",
     "nodemon": "^3.1.0",
     "pg": "^8.11.5",
     "react": "^18.2.0",
