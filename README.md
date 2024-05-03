@@ -1,10 +1,25 @@
-# Anime-List
-Search for anime on myanimelist.net using the Jikan API, then add them to a persistent PostgreSQL database.
+# Anime Heap
 
-Add it to a collection in a PostgreSQL Database
+Anime Heap is a site that allows you to search the myanimelist database and add certain anime to collections.
 
-Built with Node, Express, and React.
+## Website
 
-Coming enhancements - improved CSS, login functionality, and multiple collections.
+This is all local for now yet will be deployed once all features for a version 1 are complete
 
-Firebase will be used for login
+## Stack
+
+This is made using the following languages and frameworks:
+
+* JavaScript
+
+* React
+
+* Webpack
+
+* Node.js
+
+* Express
+
+* PostgreSQL
+
+* Axios
