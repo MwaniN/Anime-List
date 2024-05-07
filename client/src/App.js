@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import MainPage from "./MainPage.jsx"
 import CollectionPage from "./Collections.jsx"
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 // make a state that either shows Main Page or Collection page with conditional arguments in the return statement here
 // to display each
