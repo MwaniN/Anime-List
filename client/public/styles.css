@@ -8,23 +8,33 @@ img {
 body {
   background-color: #adcbe3;
 }
-
 .header {
-  display: flex;
-  background-color: #2a4d69;
-  color: #e7eff6;
-  align-items: center;
-  justify-content: center;
-}
-
-.header a {
-  color: white;
-  margin-left: 1.5rem;
-  font-size: 1.5rem;
+  margin: auto;
+  width: fit-content;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .header-title {
-  margin-left: 10px;
+  display: block;
+  margin: auto;
+  font-size: 3em;
+  margin-bottom: 20px;
+  border: black solid;
+  width: fit-content;
+  padding: 40px;
+}
+
+.header a {
+  color: black;
+  display: block;
+  margin: auto;
+  font-size: 2em;
+  border: black solid;
+  width: fit-content;
+  padding: 10px 15px;
+
 }
 
 .search-form {
