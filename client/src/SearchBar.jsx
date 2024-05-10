@@ -23,10 +23,13 @@ export default function SearchBar () {
   }
 
 
-  return <div><form className="search-form" method="post" onSubmit={handleSubmit} >
+  return <div>
+    <div className="form-container">
+    <form className="search-form" method="post" onSubmit={handleSubmit} >
   <input value={searchInput} onChange={(e) => setSearchInput(e.target.value)} type="search-bar" className="search-bar" placeholder="Search for your Anime"/>
-  <button type="submit">Search!</button>
+  <button className="search-button" type="submit">Search!</button>
   </form>
+  </div>
   {function (){
     if (queryString.length > 0) {
       return <ResultList queryString={queryString} />
