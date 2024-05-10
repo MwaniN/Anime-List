@@ -53,6 +53,11 @@ body {
   padding-right: 70px;
 }
 
+.search-bar:focus {
+  border-color: green;
+  outline: green;
+}
+
 .search-button {
   position: absolute;
   top: 0;
