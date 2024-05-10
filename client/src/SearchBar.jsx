@@ -26,7 +26,7 @@ export default function SearchBar () {
   return <div>
     <div className="form-container">
     <form className="search-form" method="post" onSubmit={handleSubmit} >
-  <input value={searchInput} onChange={(e) => setSearchInput(e.target.value)} type="search-bar" className="search-bar" placeholder="Search for your Anime"/>
+  <input value={searchInput} onChange={(e) => setSearchInput(e.target.value)} type="search-bar" className="search-bar" placeholder="search for anime"/>
   <button className="search-button" type="submit">Search!</button>
   </form>
   </div>
