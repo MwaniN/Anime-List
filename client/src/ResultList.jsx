@@ -23,7 +23,6 @@ export default function ResultList ({ queryString }) {
     <div className="results-for"> Results for {queryString}</div>
     {function (){
       if (resultList.length > 0) {
-        console.log(resultList);
         let renderResults = resultList.map(
           (result) => {
 
@@ -52,13 +51,15 @@ export default function ResultList ({ queryString }) {
                     return studios.join(', ');
                   }
 
-
+              // conjoin data to pass into the card itself
               let title = titleName();
               let animegenres = animeGenres();
               let animestudios = studios();
 
-            return <AnimeCard key={result.mal_id} mal_id={result.mal_id} title={title} image_url={result.images.jpg.image_url} animegenres={animegenres} aired={result.aired.string}
+              if (!animegenres.includes("Hentai")) {
+                return <AnimeCard key={result.mal_id} mal_id={result.mal_id} title={title} image_url={result.images.jpg.image_url} animegenres={animegenres} aired={result.aired.string}
             animestudios={animestudios} score={result.score} scored_by={result.scored_by} status={result.status} synopsis={result.synopsis}/>
+              }
           }
         )
         return renderResults;
