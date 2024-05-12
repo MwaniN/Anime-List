@@ -77,6 +77,16 @@ body {
   border-radius: 25px;
 }
 
+/* for mobile */
+
+.anime-card {
+  width: 375px;
+  height: 300px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 3fr 1fr 1fr;
+}
+
 
 @media only screen and (max-width: 811px) {
   /* .header-title {
