@@ -20,7 +20,7 @@ export default function ResultList ({ queryString }) {
   // }
 
   return <div className="result-list">
-    <div className="results-for"> Results for {queryString}</div>
+    <div className="results-for"> Results for "{queryString}"</div>
     {function (){
       if (resultList.length > 0) {
         let renderResults = resultList.map(

@@ -79,12 +79,24 @@ body {
 
 /* for mobile */
 
+.result-list {
+  display: flex;
+  flex-direction: column;
+}
+.results-for {
+  margin: auto;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .anime-card {
-  width: 375px;
+  width: 200px;
   height: 300px;
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-template-rows: 1fr 3fr 1fr 1fr;
+  margin: auto;
 }
 
 
